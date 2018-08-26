@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test_FUNBOX</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>
+        Ты сегодня покормил кота?
+      </h2>
+    </div>
+    <div class="main_content" id="elements">
+
+          <form class="first_card_container first">
+            <input type="checkbox" id="r1"/>
+            <div class="first_card_back whatever">
+              <div class="first_card">
+                <div class="first_header">
+                  Сказочное заморское яство
+                </div>
+                <h1>
+                  Нямушка
+                </h1>
+                <div class="first_taste">
+                  с фуа-гра
+                </div>
+                <div class="first_surf">
+                  10 порций<br>
+                  мышь в подарок
+                </div>
+                <div class="first_weight whatever">
+                  0,5
+                  <p>
+                    кг
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bottom_text">
+              Чего сидишь? Порадуй котэ, <a href="#">купи.</a>
+            </div>
+            <div class="bottom_text_hidden">
+              Печень утки разварная с артишоками.
+            </div>
+          </form>
+
+            <form class="first_card_container second">
+              <input type="checkbox" id="r2"/>
+              <div class="first_card_back whatever2">
+                <div class="first_card">
+                  <div class="first_header">
+                    Сказочное заморское яство
+                  </div>
+                  <h1>
+                    Нямушка
+                  </h1>
+                  <div class="first_taste">
+                    с рыбой
+                  </div>
+                  <div class="first_surf">
+                    20 порций<br>
+                    2 мыши в подарок
+                  </div>
+                  <div class="first_weight whatever2">
+                    2
+                    <p>
+                      кг
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom_text2">
+                Чего сидишь? Порадуй котэ, <a href="#">купи.</a>
+              </div>
+              <div class="bottom_text2_hidden">
+                Головы щучьи и чесноком да свежайшая семгушка.
+              </div>
+            </form>
+
+            <form class="first_card_container three">
+              <input type="checkbox" id="r3"/>
+              <div class="first_card_back whatever3">
+                <div class="first_card">
+                  <div class="first_header">
+                    Сказочное заморское яство
+                  </div>
+                  <h1>
+                    Нямушка
+                  </h1>
+                  <div class="first_taste">
+                    с курой
+                  </div>
+                  <div class="first_surf">
+                    100 порций<br>
+                    5 мышей в подарок<br>
+                    заказчик доволен
+                  </div>
+                  <div class="first_weight whatever3">
+                    5
+                    <p>
+                      кг
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom_text3">
+                Чего сидишь? Порадуй котэ, <a href="#">купи.</a>
+              </div>
+              <div class="bottom_text3_hidden">
+                Печалька, с курой закончился.
+              </div>
+            </form>
+
+    </div>
+  </div>
+
+  <script>
+  
+    var check = document.querySelector('#r1');
+    var check2 = document.querySelector('#r2');
+    var check3 = document.querySelector('#r3');
+
+    check.addEventListener('click', function(el){
+      if (check.checked) {
+        Array.prototype.forEach.call(document.querySelectorAll('.whatever'), function(el){
+           el.style.background = '#d91667';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text'),function(el){
+           el.style.display = 'none';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text_hidden'),function(el){
+           el.style.display = 'block';
+         });
+      }else{
+        Array.prototype.forEach.call(document.querySelectorAll('.whatever'), function(el){
+           el.style.background = '#1698d9';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text'),function(el){
+           el.style.display = 'block';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text_hidden'),function(el){
+           el.style.display = 'none';
+         });
+      }
+    });
+    check2.addEventListener('click', function(el){
+      if (check2.checked) {
+        Array.prototype.forEach.call(document.querySelectorAll('.whatever2'), function(el){
+           el.style.background = '#d91667';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text2'),function(el){
+           el.style.display = 'none';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text2_hidden'),function(el){
+           el.style.display = 'block';
+         });
+      }else{
+        Array.prototype.forEach.call(document.querySelectorAll('.whatever2'), function(el){
+           el.style.background = '#1698d9';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text2'),function(el){
+           el.style.display = 'block';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text2_hidden'),function(el){
+           el.style.display = 'none';
+         });
+      }
+    });
+    check3.addEventListener('click', function(el){
+      if (check3.checked) {
+        Array.prototype.forEach.call(document.querySelectorAll('.whatever3'), function(el){
+           el.style.background = 'darkgrey';
+           el.style.opacity = '0.9';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text3'),function(el){
+           el.style.display = 'none';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text3_hidden'),function(el){
+           el.style.display = 'block';
+         });
+      }else{
+        Array.prototype.forEach.call(document.querySelectorAll('.whatever3'), function(el){
+          el.style.background = '#1698d9';
+          el.style.opacity = '1';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text3'),function(el){
+           el.style.display = 'block';
+         });
+         Array.prototype.forEach.call(document.querySelectorAll('.bottom_text3_hidden'),function(el){
+           el.style.display = 'none';
+         });
+      }
+    });
+  </script>
+
+</body>
+</html>
